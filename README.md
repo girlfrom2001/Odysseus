@@ -1,5 +1,5 @@
 # Odysseus
-Text based adventure game. The story of Odysseus written in python.
+Text adventure game based on the story of Odysseus.
 
 
 ## Final Project requirements
