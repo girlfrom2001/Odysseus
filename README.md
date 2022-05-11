@@ -1,7 +1,6 @@
 # Odysseus
 Text adventure game based on the story of Odysseus.
 
-
 ## Final Project requirements
 
 You are to create a text adventure game in the spirit of Zork and other similar games. The following are requirements for the game:
@@ -15,4 +14,4 @@ You are to create a text adventure game in the spirit of Zork and other similar 
 - Each room should have a description that is printed when you enter the room.
 - Your program should be well-organized, well-documented, and easy to read.
 
-* cprint may not work in vscode
+<i> cprint may not work in vscode </i>
