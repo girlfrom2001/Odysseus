@@ -40,7 +40,7 @@ def progress():
     inventoryLoss()
     global look
     look = 0
-    time.sleep(12)
+    time.sleep(15)
     clear()
 
 def revisit(): # only if you look, you can revisit previous island
