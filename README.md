@@ -14,3 +14,5 @@ You are to create a text adventure game in the spirit of Zork and other similar 
 - You should have an inventory in the game. The inventory should be instrumental for solving at least one puzzle. Remember that you can check if something is in a list using the "in" keyword.
 - Each room should have a description that is printed when you enter the room.
 - Your program should be well-organized, well-documented, and easy to read.
+
+* cprint may not work in vscode
