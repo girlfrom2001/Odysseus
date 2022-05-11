@@ -1,9 +1,7 @@
 # Odysseus
 Text adventure game based on the story of Odysseus.
 
-## Final Project requirements
-
-You are to create a text adventure game in the spirit of Zork and other similar games. The following are requirements for the game:
+## Objectives
 
 - A minimum of 8 rooms
 - Each room should be its own function.
