@@ -1,10 +1,7 @@
-#!/usr/bin/python3
-
 import time		# used to add wait time during printing
 import sys		# used to exit the program
 import os		# used to clear the console
-from termcolor import cprint 	# print in different colors
-# dialogue is in color
+# from termcolor import cprint 	# print in different colors
 import random
 import HadesQuotes as quote
 
@@ -40,7 +37,7 @@ def progress():
     inventoryLoss()
     global look
     look = 0
-    time.sleep(15)
+    time.sleep(5)
     clear()
 
 def revisit(): # only if you look, you can revisit previous island
@@ -79,7 +76,7 @@ def Ismaros(): # island 1
         print(space+ "You have run out of food and water. The Gods do not favor you and you perish at sea.")
         sys.exit()
     else:
-        cprint("\nThat is not a valid choice. Try again.\n", "grey", "on_red")
+        print(space+ "That is not a valid choice. Try again.\n")
         Ismaros()
 
 def LotusEaters(): # island 2
@@ -112,7 +109,7 @@ def LotusEaters(): # island 2
             print(space+ "The time at sea has caused the crew to go stir crazy. The crew start fighting between each other for food. No one is left.")
             sys.exit()
     else:
-        cprint("\nThat is not a valid choice. Try again.\n", "grey", "on_red")
+        print(space+ "That is not a valid choice. Try again.\n")
         LotusEaters()
 
 def Sicily(): # island 3
@@ -156,7 +153,7 @@ def Sicily(): # island 3
             print(space+ "The crew has resorted to eating mysterious brown objects on the ship. It does not end well.")
             sys.exit()
     else:
-        cprint("\nThat is not a valid choice. Try again.\n", "grey", "on_red")
+        print("\nThat is not a valid choice. Try again.\n")
         Sicily()
 
 def Aeaea(): # island 4
@@ -174,12 +171,10 @@ def Aeaea(): # island 4
             inventoryAdd()
             islands.append("island 4")
         elif user_pick == "2":
-            print("As you stuff your face with the hearty meal, she tempts you to drink an elixir. The Goddess laughs at you.")
-            cprint("Now you swine, be off to the pigsty where you belong.", "cyan")
-            print("You realize, Circe is a sorcorress, but it is too late as your hands become hooves and your nose transforms to a snout. \n\nOink Oink.")
+            print(space+ "As you stuff your face with the hearty meal, she tempts you to drink an elixir. The Goddess laughs at you. \'Now you swine, be off to the pigsty where you belong.\' You realize, Circe is a sorcorress, but it is too late as your hands become hooves and your nose transforms to a snout. \n\nOink Oink.")
             sys.exit()
         else:
-            cprint("\nThat is not a valid choice. Try again.\n", "grey", "on_red")
+            print("That is not a valid choice. Try again.")
             Aeaea()
     elif action == "3":
         print(space+ "There is a pigsty with countless amounts of swine. Pigs won't attack you, but these ones look almost human-like. A storm approaches. You collect the rainwater and stock your ship with pigs.\n")
@@ -200,7 +195,7 @@ def Aeaea(): # island 4
             print(space+ "There is a storm. One of the crew members did not anchor down the boat. Your boat capsizes and you drown.")
             sys.exit()
     else:
-        cprint("\nThat is not a valid choice. Try again.\n", "grey", "on_red")
+        print("\nThat is not a valid choice. Try again.\n")
         Aeaea()
 
 def Underworld(): # island 5
@@ -213,16 +208,16 @@ def Underworld(): # island 5
     elif action == "2":
         print(space+ "You run into the God of the Underworld himself.\n")
         if random.choice(quote.Hades) == (quote.Hades[6]):
-            cprint(quote.Hades[6], "cyan")
-            cprint("\nThe minions always lose when we play chess.\n", "cyan")
+            print(quote.Hades[6])
+            print(space+ "The minions always lose when we play chess.")
         else:
-            cprint(random.choice(quote.Hades), "cyan")
+            print(random.choice(quote.Hades))
         print(space+ "Hades leads you through the Elysium fields.\n")
         inventoryAdd()
         islands.append("island 5")
     elif action == "3":
         print(space+ "You run into Tieresias. He is a blind prophet.")
-        cprint("\nJourney past the Sirens. They will sing you sweet music. You must not listen. Plug your ears with beeswax.", "cyan")
+        print(space+ "Journey past the Sirens. They will sing you sweet music. You must not listen. Plug your ears with beeswax.")
         print(space+ "Tieresias has heard about your travels and gives you supplies for your journey.\n")
         inventoryAdd()
         islands.append("island 5")
@@ -231,7 +226,7 @@ def Underworld(): # island 5
         return puzzle
     elif action == "4":
         print(space+ "You run into Eurydice. Wasn't she part of a tragic love story?\n")
-        cprint(random.choice(quote.Eurydice), "cyan")
+        print(space+ random.choice(quote.Eurydice))
         print(space+ "Eurydice wants you to get home to your loved ones.\n")
         inventoryAdd()
         islands.append("island 5")
@@ -246,7 +241,7 @@ def Underworld(): # island 5
             print(space+ "You can hear the spirits underneath the boat. You start to recognize faces as they drift on by. You miss them so much. You jump ship to join them...")
             sys.exit()
     else:
-        cprint("\nThat is not a valid choice. Try again.\n", "grey", "on_red")
+        print("\nThat is not a valid choice. Try again.\n")
         Underworld()
 
 def Sirens(): # island 6
@@ -282,7 +277,7 @@ def Sirens(): # island 6
         islands.remove("island 5")
         cheat() #bypass lack of inventory
     else:
-        cprint("\nThat is not a valid choice. Try again.\n", "grey", "on_red")
+        print("\nThat is not a valid choice. Try again.\n")
         Sirens()
 
 def Ogygia(): # island 7
@@ -307,7 +302,7 @@ def Ogygia(): # island 7
             print(space+ "On Calypso's Island, time is different. You gain immortality on the island. You are free to indulge in your vices.")
             sys.exit()
         else:
-            cprint("\nThat is not a valid choice. Try again.\n", "grey", "on_red")
+            print("\nThat is not a valid choice. Try again.")
             Ogygia()
     elif action == "4":
         print(space+ "The rocks are loose as you climb to get a viewpoint. Your foot slipped and you cause a rockslide. You do not survive.")
@@ -323,7 +318,7 @@ def Ogygia(): # island 7
             print(space+ "You have run out of food and water.")
             sys.exit()
     else:
-        cprint("\nThat is not a valid choice. Try again.\n", "grey", "on_red")
+        print("\nThat is not a valid choice. Try again.\n")
         Ogygia()
 
 def Ithaca(): # island 8
@@ -353,12 +348,12 @@ def Ithaca(): # island 8
             print("Until the next journey...")
             sys.exit()    
     else:
-        cprint("\nThat is not a valid choice. Try again.\n", "grey", "on_red")
+        print("\nThat is not a valid choice. Try again.\n")
         Ithaca()
 
 while True:
     if ("island 1" and "island 2" and "island three" and "island 7" and "island 5" and "island 6" in islands): # solves Underworld redundancy
-        Ithaca()
+        Ogygia()
     elif ("island three" and "island 7" in islands): # Ogygia to Underworld
         Underworld()
         progress()
